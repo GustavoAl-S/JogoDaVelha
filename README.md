@@ -7,10 +7,10 @@ Este é um simples jogo da velha implementado em Java. O jogo é jogado no termi
 1. Clone o repositório ou baixe o código para o seu computador.
 2. Compile o código com o comando:
    ```bash
-   javac jogoDaVelha.java
+   javac *.java
 3. Execute o programa com:
    ```bash
-   java jogoDaVelha
+   java jogoApp
 4. O jogo solicita que você informe a linha e coluna (valores de 1 a 3) que deseja realizar sua jogada.
 5. O jogo inicia com o Jogador 'X' e vai alternando entre os jogadores 'O' e 'X'.
 6. O jogo termina quando um dos jogadores vence ou quando o tabuleiro está cheio e o jogo empata.
