@@ -1,52 +1,9 @@
-import java.util.Scanner;
 
 public class jogoDaVelha {
     
     static char[][] velha = new char[3][3];
 
-
-    public static void main(String[] args) {
-
-        Scanner sc = new Scanner(System.in);
-
-        char jogadorAtual = 'X';
-
-        inicializaTabuleiro();
-        
-        while (true) {
-
-            exibirTabuleiro();
-
-            System.out.println("Jogador " + jogadorAtual + " informe sua jogada: ");
-            System.out.println("Linha 0, 1, 2 :");
-            int linha = sc.nextInt();
-            System.out.println("Coluna 0, 1, 2: ");
-            int coluna = sc.nextInt();
-
-            jogada(linha, coluna, jogadorAtual);
-
-            exibirTabuleiro();
-
-            if (verificarVitoria()){
-                exibirTabuleiro();
-                System.out.println("Jogador " + jogadorAtual + " venceu o jogo");
-                break;
-            }
-            if (verificarEmpate()){
-                exibirTabuleiro();
-                System.out.println("O jogo empatou");
-                break;
-            }
-            
-            if (jogadorAtual == 'X') {
-                jogadorAtual = 'O';
-            }else if (jogadorAtual == 'O') {
-                jogadorAtual = 'X';
-            }
-        }
-    }
-
-    public static void inicializaTabuleiro(){
+    public void inicializaTabuleiro(){
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 velha[i][j] = ' ';
@@ -54,7 +11,7 @@ public class jogoDaVelha {
         }
     }
 
-    public static void exibirTabuleiro() {
+    public void exibirTabuleiro() {
         System.out.println("-----------");
         for (int i = 0; i < 3; i++) {
             System.out.print("| ");
@@ -66,19 +23,22 @@ public class jogoDaVelha {
         }
     }
 
+
     //Metodo para o jogador realizar uma jogada
-    public static void jogada(int linha, int coluna, char jogador){
+    public boolean jogada(int linha, int coluna, char jogador){
 
         //Verifica se o numero que o usuario digitar é valido e se a linha e coluna estão vazios
         if (linha >= 0 && linha < 3 && coluna >= 0 && coluna < 3 && velha[linha][coluna] == ' '){
             velha[linha][coluna] = jogador;
+            return true;
         }else{
-            System.out.println("Movimento invalido ou posição já preenchida");
+            System.out.println("\n Movimento invalido ou posição já preenchida");
+            return false;
         }
         
     }
 
-    public static boolean verificarVitoria(){
+    public boolean verificarVitoria(){
         
         //Entra em um loop para verfificar cada linha
         //verifica se o primeiro elemento está vazio, para comprar com os outros da mesma linha
@@ -107,7 +67,7 @@ public class jogoDaVelha {
     }
 
 
-    public static boolean verificarEmpate() {
+    public boolean verificarEmpate() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 //se tiver um espaço vazio ele retorna falso e o jogo continua
