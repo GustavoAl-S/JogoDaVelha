@@ -26,6 +26,7 @@ Este é um simples jogo da velha implementado em Java. O jogo é jogado no termi
 * Metódo que verifica a vitória nas linhas, colunas e diagonais.
 * Metódo que verifica o empate do jogo, quando o tabuleiro ficar cheio e não houver vencedor.
 * Alternância entre os jogadores.
+* Loop para verificar se a jogada é valida, caso não o jogador repete sua jogada.
 
 ## Exemplo do Jogo
 Aqui está um exemplo de como o tabuleiro é exibido durante o jogo:
