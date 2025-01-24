@@ -1,28 +1,24 @@
-# Jogo da Velha em Java
+# #️⃣ Jogo da Velha em Java
 
 Este é um simples jogo da velha implementado em Java. O jogo é jogado no terminal e permite que dois jogadores alternem suas jogadas, o tabuleiro é exibido após cada jogada, e o jogo termina quando um dos jogadores vencer ou se o tabuleiro estiver cheio e ocorrer um empate.
 
-## Como Jogar
+## Como Jogar:
 
 1. Clone o repositório ou baixe o código para o seu computador.
-2. Compile o código com o comando:
-   ```bash
-   javac *.java
-3. Execute o programa com:
-   ```bash
-   java jogoApp
+2. Abra o arquivo em sua IDE de preferência.
+3. Execute a classe jogoApp.java
 4. O jogo solicita que você informe a linha e coluna (valores de 1 a 3) que deseja realizar sua jogada.
 5. O jogo inicia com o Jogador 'X' e vai alternando entre os jogadores 'O' e 'X'.
 6. O jogo termina quando um dos jogadores vence ou quando o tabuleiro está cheio e o jogo empata.
 
-## Regras
+## Regras:
 * O tabuleiro é composto por uma grade 3x3.
 * Os jogadores se alternam, colocando suas marcas (X ou O) em uma célula vazia do tabuleiro.
 * O primeiro jogador a alinhar três marcas consecutivas em uma linha, coluna ou diagonal vence.
 * Se todas as células do tabuleiro forem preenchidas e nenhum jogador vencer, o jogo empata.
 
-## Funcionalidades
-* Tabuleiro dinãminco que exibe o estado atual do jogo conforme as jogadas.
+## Funcionalidades:
+* Tabuleiro dinâmico que exibe o estado atual do jogo conforme as jogadas.
 * Metódo que verifica a vitória nas linhas, colunas e diagonais.
 * Metódo que verifica o empate do jogo, quando o tabuleiro ficar cheio e não houver vencedor.
 * Alternância entre os jogadores.
